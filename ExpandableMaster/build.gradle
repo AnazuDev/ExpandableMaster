@@ -1,5 +1,31 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'com.android.library' 
+ apply plugin: 'com.jfrog.bintray' 
+ apply plugin: 'com.github.dcendents.android-maven' 
+ ext { 
+     bintrayRepo = 'Library'  // this is the same as whatever you called your repository in Bintray 
+     bintrayName = 'BlurImage' // your bintray package name. I am calling it the same as my library name. 
+  
+     publishedGroupId = 'com.jackandphantom.android' 
+     libraryName = 'expandablemaster' 
+     artifact = 'expandablemaster' // I'm calling it the same as my library name 
+  
+     libraryDescription = 'This Android Project help you to make your image blur in fastest way' 
+  
+     siteUrl = 'https://github.com/AnazuDev/ExpandableMaster' 
+     gitUrl = 'https://github.com/AnazuDev/ExpandableMaster.git' 
+  
+     libraryVersion = '1.1.1b' 
+  
+     developerId = 'AnazuDev' // Maven plugin uses this. I don't know if it needs to be anything special. 
+     developerName = 'Anas Bex' 
+     developerEmail = 'anazustudios@gmail.com' 
+  
+     licenseName = 'The Apache Software License, Version 2.0' 
+     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt' 
+     allLicenses = ["Apache"] 
+ }
+ 
 android {
     compileSdk 31
 
